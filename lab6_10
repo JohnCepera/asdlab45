@@ -8,13 +8,10 @@ print("-" * 50)
 def selection_sort(arr):
     n = len(arr)
     for i in range(n):
-        # Предполагаем, что текущий элемент — минимальный
         min_idx = i
-        # Ищем минимальный элемент в оставшейся неотсортированной части
         for j in range(i + 1, n):
             if arr[j] < arr[min_idx]:
                 min_idx = j
-        # Меняем найденный минимальный элемент с первым элементом неотсортированной части
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
 
